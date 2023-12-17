@@ -2,5 +2,31 @@
 
 import os
 
-os.getcwd()
+
+# Criando uma lista com os arquivos da pasta:
+arquivo =[]
+arquivo = os.listdir()
+
+# Criando um lista com as extenções dos arquivos da pasta:
+ext = []
+for valor in arquivo:
+    ext.append(valor[-3:])
+
+# Limpando extenções repetidas convertendo a lista em um conjunto
+a_ext = set(ext)
+
+# Convertendo novamente em lista novamente sem as extenções repetidas
+b_ext = []
+for valor in a_ext:
+    b_ext.append(valor)
+
+# Mostrando os arquivos que pertence a extensão:
+for a in arquivo:
+    for b in b_ext:
+        if a[-3:] == b:
+            print("Arquivo: {} tem a extenção: .{}".format(a,b))
+            
+
+
+
 

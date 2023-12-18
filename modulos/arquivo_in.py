@@ -21,11 +21,7 @@ for valor in a_ext:
     b_ext.append(valor)
 
 # Mostrando os arquivos que pertence a extensão:
-for a in arquivo:
-    for b in b_ext:
-        if a[-3:] == b:
-            print("Arquivo: {} tem a extenção: .{}".format(a,b))
-            
+
 
 
 

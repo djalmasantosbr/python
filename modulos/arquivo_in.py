@@ -20,7 +20,19 @@ b_ext = []
 for valor in a_ext:
     b_ext.append(valor)
 
+#criando as pastas
+for extensao in b_ext:
+    os.mkdir(extensao)
+
 # Mostrando os arquivos que pertence a extensão:
+for a in arquivo:
+    for b in b_ext:
+        if a[-3:] == b:
+            print("Arquivo: {} tem a extenção: .{}".format(a,b))
+
+
+    
+            
 
 
 

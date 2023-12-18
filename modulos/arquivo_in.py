@@ -2,7 +2,6 @@
 
 import os
 
-
 # Criando uma lista com os arquivos da pasta:
 arquivo =[]
 arquivo = os.listdir()

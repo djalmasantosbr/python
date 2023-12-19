@@ -1,10 +1,18 @@
 # programa para organizar arquivos em pastas
 
 import os
-
+cwd = os.getcwd()
 # Criando uma lista com os arquivos da pasta:
 arquivo =[]
-arquivo = os.listdir()
+arquivo = os.listdir(cwd)
+novo_arquivo = []
+
+for arq in arquivo:
+    if os.path.isfile(arquivo) and '.py' not in arq:
+        novo_arquivo.append(arq)
+        print(novo_arquivo)
+
+novo_arquivo
 
 # Criando um lista com as extenções dos arquivos da pasta:
 ext = []

@@ -6,7 +6,7 @@ placar_maquina = 0
 
 lance = ['Papel','Pedra', 'Tesoura']
 
-
+# Essa função devolve o resultado da jogada e uma variavel para fazer a soma do placar
 def jokepo(voce,computador):
     if (voce == 'Papel' and computador == 'Papel') or (voce == 'Pedra' and computador == 'Pedra') or (voce == 'Tesoura' and computador == 'Tesoura')  :
         resultado = "Empatou..."
@@ -45,14 +45,18 @@ while True:
         escolha = int(input())
 
         voce = lance[escolha]
+        #Varial que guarda a jogada do computador
         computador = lance[random.randrange(3)]
 
         print("============================")
         print("Sua jogada: {}".format(voce))
         print("Jogada do computador: {}".format(computador))
+        
+        # Chamando a função para mostrar o resultado da jogada
         print(jokepo(voce,computador)[0])
         print("============================")
-
+        
+        # If para fazer a soma do placar
         if jokepo(voce,computador)[1] == 1:
             placar_humano = placar_humano + 1
         elif jokepo(voce,computador)[1] == 2: 

@@ -6,7 +6,7 @@ d1 = {
     (1,2,3,4) : 'Tupla',
 }
 
-if ''
+
 print(d1)
 
 # Dicionário - For

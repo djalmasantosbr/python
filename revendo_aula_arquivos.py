@@ -1,5 +1,6 @@
 from pathlib import Path
 import os
+# Aula 5 - Lendo e escrevendo arquivos
 
 # Retornando caminho absoluto
 print(Path.cwd())
@@ -54,3 +55,36 @@ print(caminho_arquivo.parents[1])
 
 print(caminho_arquivo.parent.parent.parent)
 print(caminho_arquivo.parents[2])
+
+# Aula 6 - Lendo e escrevendo arquivos
+
+# Listando arquivo de uma pasta
+
+print(os.listdir(Path.cwd())) # Lista os arquivos no diretório
+
+print(Path.cwd().glob('*')) # Lista todos os caminhos absolutos em forma de generator
+
+print(list(Path.cwd().glob('*'))) # Usando o comando list para mostrar todos os caminhos absolutos
+
+# Listando arquivos de uma determinada extensão
+
+print(list(Path.cwd().glob('*.py')))
+
+# Listar tudo dentro de uma pasta
+
+print(list(Path.cwd().glob('**/*'))) # mostra todos os arquvos em pastas e subpastas
+
+# Validando caminhos
+
+print(Path.home().exists()) # verifica se o caminho existe
+
+nao_existe = Path.home() / 'nao_existe'
+print(nao_existe.exists())
+
+# Verificando se é arquivo ou pasta
+
+print(Path(__file__))
+print(Path(__file__).is_file()) # o comando .is_file esta perguntando se é um arquivo
+
+
+

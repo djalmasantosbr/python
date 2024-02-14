@@ -13,4 +13,4 @@ def retorna_tamanho_arquivos(caminho, profundidade=1, tamanho_linha=0):
                 retorna_tamanho_arquivos(diretorio, profundidade-1, tamanho_linha+1)
             
 caminho = Path.home() / 'OneDrive' / 'Documentos'
-retorna_tamanho_arquivos(caminho, profundidade=2)
+retorna_tamanho_arquivos(caminho, profundidade=3)
